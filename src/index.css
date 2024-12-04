@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f7fb;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden; /* Prevents scrolling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('C:\Users\Nitesh\OneDrive\Pictures\Screenshots\Screenshot 2024-12-04 105731.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    background-color: rgb(170, 214, 219);
+    width: 90%;
+    max-width: 600px;
+    height: 90vh; /* Adjust container height to fit within the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Adjusted to start content at the top */
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden; /* Hide any overflow content */
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Add margin for spacing */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+    margin: 0;
+    text-align: center;
+}
+
+.add-todo, .todo-list {
+    width: 100%;
+    height: 40vh; /* Set a fixed height for scrolling sections */
+    overflow-y: auto;
+}
+
+/* Hide scrollbar but allow smooth scrolling */
+.add-todo::-webkit-scrollbar, .todo-list::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+.add-todo h2, .todo-list h2 {
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Reduced gap to save space */
+    width: 100%; /* Ensure form takes full width */
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Fixed height and disabled resizing for the textarea */
+form textarea {
+    height: 100px; /* Set a fixed height */
+    resize: none; /* Disable resizing */
+    overflow: auto; /* Enable scrolling if the content overflows */
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #28a745;
+    outline: none;
+}
+
+form input[type="date"] {
+    cursor: pointer;
+}
+
+form button.add-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    text-transform: uppercase;
+}
+
+form button.add-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; /* Reduced padding to save space */
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    min-height: 60px; /* Ensure all task containers have a minimum height */
+}
+
+.task.completed .task-details {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.task:hover {
+    transform: translateY(-3px);
+}
+
+.task .task-details {
+    flex-grow: 1;
+}
+
+.task .task-details h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #333;
+}
+
+.task .task-details p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.task .task-details small {
+    display: block;
+    color: #888;
+    margin-top: 5px;
+}
+
+.task-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.task-buttons label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+button.delete {
+    background-color: #dc3545;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    text-transform: uppercase;
+}
+
+button.delete:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}

@@ -40,7 +40,7 @@ const TaskForm = () => {
           
         </header>
         <section className="add-todo">
-          <h2></h2>
+          {/* <h2></h2> */}
           <form onSubmit={handleSubmit}>
             <input
               type="text"
